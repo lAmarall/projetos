@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paga Marreco</title>
+    <style>
+        body {font: Arial, 18pt}
+        button {font-size: 12pt; padding: 30px;}
+    </style>
+</head>
+<body>
+    <h1> Calculadora da divisão do futeba para os atrasados</h1>
+    <button onclick="inicio()">Calculadora de Marreco</button>
+    <script>
+        function inicio(){
+            var nome = String(window.prompt("Insira o nome de quem se atrasou? "))
+            var minutos = Number(prompt(`Quantos minutos o ${nome} se atrasou? `))
+            var futeba = Number(prompt("Qual o valor do futeba? "))
+            var pessoas = String(prompt("Quantas pessoas jogaram o futeba? "))
+            var quadrapessoa = futeba / pessoas
+            var atraso = ((futeba / pessoas) / 60) * minutos
+            var desconto= quadrapessoa - (atraso / (pessoas - 1))
+            var total = quadrapessoa + atraso
+            alert(`O ${nome} se atrasou ${minutos} minutos e terá que pagar ${atraso.toFixed(2)} à mais, um total de ${total.toFixed(2)} `)
+            alert(`Sendo assim, os outros participantes terão que pagar ${desconto.toFixed(2)} `)
+        }    
+    </script>
+</body>
+</html>
