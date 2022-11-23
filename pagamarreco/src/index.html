@@ -7,11 +7,26 @@
     <style>
         body {font: Arial, 18pt}
         button {font-size: 12pt; padding: 30px;}
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+            margin-top: 5px;
+            padding-left: 30px;
+        }
     </style>
 </head>
 <body>
     <h1> Calculadora da divisão do futeba para os atrasados</h1>
-    <button onclick="inicio()">Calculadora de Marreco</button>
+    <button onclick="inicio()">Calculadora de Marreco</button> <br>
+    <h2>Insira o nome de quem se atrasou</h2>
+    <input type="text" name="nome" id="nome1">
+    <h2>Quantos minutos ele se atrasou?</h2>
+    <input type="number" name="numero1" id="numero1">
+    <h2>Qual o valor do futeba?</h2>
+    <input type="number" name="numero2" id="numero2">
+    <h2>Quantas pessoas jogaram o futeba?</h2>
+    <input type="number" name="numero3" id="numero3">
+    
     <script>
         function inicio(){
             var nome = String(window.prompt("Insira o nome de quem se atrasou? "))
@@ -22,8 +37,8 @@
             var atraso = ((futeba / pessoas) / 60) * minutos
             var desconto= quadrapessoa - (atraso / (pessoas - 1))
             var total = quadrapessoa + atraso
-            alert(`O ${nome} se atrasou ${minutos} minutos e terá que pagar ${atraso.toFixed(2)} à mais, um total de ${total.toFixed(2)} `)
-            alert(`Sendo assim, os outros participantes terão que pagar ${desconto.toFixed(2)} `)
+            document.write(`O ${nome} se atrasou ${minutos} minutos e terá que pagar ${atraso.toFixed(2)} à mais, um total de ${total.toFixed(2)} <br/>`)
+            document.write(`<p>Sendo assim, os outros participantes terão que pagar ${desconto.toFixed(2)}<p/>`)
         }    
     </script>
 </body>
