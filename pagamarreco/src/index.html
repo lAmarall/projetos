@@ -6,18 +6,27 @@
     <title>Paga Marreco</title>
     <style>
         body {font: Arial, 18pt}
-        button {font-size: 12pt; padding: 30px;}
+        button {font-size: 18pt; padding: 50px; margin-top: 30px; }
         input {
-            font: normal 18pt Arial;
+            font: normal 12pt Arial;
             width: 100px;
             margin-top: 5px;
+            margin-bottom: 5px;
             padding-left: 30px;
+        }
+        div#res {
+            margin-top: 20px; padding: 30px;
+            font-size: 18pt;
+        }
+        div#out {
+            padding: 30px;
+            font-size: 18pt;
         }
     </style>
 </head>
 <body>
     <h1> Calculadora da divisão do futeba para os atrasados</h1>
-    <button onclick="inicio()">Calculadora de Marreco</button> <br>
+    <!--<button onclick="inicio()">Calculadora de Marreco</button> <br> -->
     <h2>Insira o nome de quem se atrasou</h2>
     <input type="text" name="nome" id="nome1">
     <h2>Quantos minutos ele se atrasou?</h2>
@@ -25,9 +34,30 @@
     <h2>Qual o valor do futeba?</h2>
     <input type="number" name="numero2" id="numero2">
     <h2>Quantas pessoas jogaram o futeba?</h2>
-    <input type="number" name="numero3" id="numero3">
-    
+    <input type="number" name="numero3" id="numero3"> <br>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+    <div id="out"></div>
     <script>
+        function calcular(){
+            var nome = document.getElementById('nome1')
+            var minutos = document.getElementById('numero1')
+            var futeba = document.getElementById('numero2')
+            var pessoas = document.getElementById('numero3')
+            var s1 = String(nome.value)
+            var n1 = Number(minutos.value)
+            var n2 = Number(futeba.value)
+            var n3 = Number(pessoas.value)
+            var quadrapessoa = n2 / n3
+            var atraso = (quadrapessoa / 60) * n1
+            var desconto = quadrapessoa - (atraso/(n3-1))
+            var total = quadrapessoa + atraso
+            res.innerHTML = `O ${s1} se atrasou ${n1} minutos e terá que pagar ${atraso.toFixed(2)} à mais, um total de ${total.toFixed(2)}`
+            out.innerHTML = `Sendo Assim, os outros participantes terão que pagar ${desconto.toFixed(2)}`
+        }
+    </script>
+        
+    <script>/*
         function inicio(){
             var nome = String(window.prompt("Insira o nome de quem se atrasou? "))
             var minutos = Number(prompt(`Quantos minutos o ${nome} se atrasou? `))
@@ -39,7 +69,7 @@
             var total = quadrapessoa + atraso
             document.write(`O ${nome} se atrasou ${minutos} minutos e terá que pagar ${atraso.toFixed(2)} à mais, um total de ${total.toFixed(2)} <br/>`)
             document.write(`<p>Sendo assim, os outros participantes terão que pagar ${desconto.toFixed(2)}<p/>`)
-        }    
+        }    */
     </script>
 </body>
 </html>
