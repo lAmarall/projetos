@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paga Marreco 2.0</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora da divisão do futeba para os atrasados </h1>
+    </header>
+    <section>
+        <div> <p>Insira o nome de quem se atrasou: </p>
+        <input type="text" name="txtnome" id="txtnome1">
+        <p>Quantos minutos ele se atrasou?</p>
+        <input type="number" name="numatraso" id="numatraso" max="60">
+        <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
+        <p>Qual valor do futeba?</p>
+        <input type="number" name="numvalor" id="numvalor">
+        <p>Quantas pessoas jogaram o futeba?</p>
+        <input type="number" name="numpessoas" id="numpessoas">
+        <p>Quanto tempo de duração tem o jogo?</p>
+        <input type="radio" name="tempojogo" id="uma-hora" checked>
+        <label for="UmaHora">60 minutos</label>
+        <input type="radio" name="tempojogo" id="uma-hora-meia">
+        <label for="UmaHoraeMeia">90 minutos</label>
+        <input type="radio" name="tempojogo" id="duas-horas">
+        <label for="DuasHoras">120 minutos</label>
+        </select>
+        <p>
+            <input type="button" value="Calcular" onclick="calcular()">
+        </p>
+        </div>
+        <div id="res">a</div>
+        <div id="out">b</div>
+        <div id="fin">c</div>
+    </section>
+    <footer>
+        <p>&copy; Shape Devs </p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
