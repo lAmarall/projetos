@@ -11,22 +11,43 @@
         <h1>Calculadora da divisão do futeba para os atrasados </h1>
     </header>
     <section>
-        <div> <p>Insira o nome de quem se atrasou: </p>
+        <div>
+        <fieldset>
+         <legend>
+             <p>Insira o nome de quem se atrasou: </p>
+         </legend>
         <input type="text" name="txtnome" id="txtnome1">
-        <p>Quantos minutos ele se atrasou?</p>
-        <input type="number" name="numatraso" id="numatraso" max="60">
-        <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
-        <p>Qual valor do futeba?</p>
-        <input type="number" name="numvalor" id="numvalor">
-        <p>Quantas pessoas jogaram o futeba?</p>
-        <input type="number" name="numpessoas" id="numpessoas">
-        <p>Quanto tempo de duração tem o jogo?</p>
-        <input type="radio" name="tempojogo" id="uma-hora" value="60" checked>
-        <label for="UmaHora">60 minutos</label>
-        <input type="radio" name="tempojogo" id="uma-hora-meia" value="90">
-        <label for="UmaHoraeMeia">90 minutos</label>
-        <input type="radio" name="tempojogo" id="duas-horas" value="120">
-        <label for="DuasHoras">120 minutos</label>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Quantos minutos ele se atrasou?</p>
+            </legend>
+            <input type="number" name="numatraso" id="numatraso" max="60">
+            <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Qual valor do futeba?</p>
+            </legend>
+            <input type="number" name="numvalor" id="numvalor">
+        </fieldset>
+        <fieldset>
+            <legend>
+                <p>Quantas pessoas jogaram o futeba?</p>
+            </legend>
+            <input type="number" name="numpessoas" id="numpessoas">
+        </fieldset>
+        <p>
+            <fieldset>
+                <legend>Quanto tempo de duração tem o jogo?</legend>
+                <input type="radio" name="tempojogo" id="uma-hora" value="60" checked>
+                <label for="UmaHora">60 minutos</label>
+                <input type="radio" name="tempojogo" id="uma-hora-meia" value="90">
+                <label for="UmaHoraeMeia">90 minutos</label>
+                <input type="radio" name="tempojogo" id="duas-horas" value="120">
+                <label for="DuasHoras">120 minutos</label>
+            </fieldset>
+        </p>
         </select>
         <p>
             <input type="button" value="Calcular" onclick="calcular()">

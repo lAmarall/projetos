@@ -22,7 +22,7 @@ function calcular(){
     var valor1 = Number(valor.value)
     var pessoas1 = Number(pessoas.value)
     var minutosjogo = minutagem
-    if (minutos1 > minutosjogo){
+    if (minutos1 > minutos){
         alert('ERRO - O VALOR DE MINUTOS DEVE SER INFERIOR A 60')
     } else {
         var quadrapessoa = valor1/pessoas1
