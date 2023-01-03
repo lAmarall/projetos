@@ -1,7 +1,11 @@
 body{
-    background-color: rgba(33, 65, 248, 0.986);
+    /*background-color: rgba(33, 65, 248, 0.986);*/
     font: normal 15pt Arial;
-}
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Campo_5.jpg);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}   
 
 header{
 color: white;
