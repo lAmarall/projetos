@@ -1,36 +1,36 @@
 body{
     /*background-color: rgba(33, 65, 248, 0.986);*/
     font: normal 15pt Arial;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Campo_5.jpg);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d7/Na_v%C3%A9spera_da_estreia%2C_delega%C3%A7%C3%B5es_ol%C3%ADmpicas_de_futebol_visitam_o_Man%C3%A9_Garrincha_%2828132432274%29.jpg);
+    background-position: center;
+    background-size: auto;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 80%; 
 }   
-
 header{
 color: white;
 text-align: center;
-
 }
-
 section{
-    background-color: white;
+    background-color: #3b6035;
+    background-image: image();
     border-radius: 10px;
     padding: 15px;
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.342);
 }
-
 div{
     padding: 5px;
     text-justify: auto;
 }
-
-div#botaocalc{
+/*div#botaocalc{
+    text-align: center;
+} */
+.botaocalc{
     text-align: center;
 }
-
 footer {
 color: white;
 text-align: center;
