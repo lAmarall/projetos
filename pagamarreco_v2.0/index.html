@@ -9,38 +9,41 @@
 <body>
     <header>
         <h1><abbr title="Calculadora da divisão do futeba para os atrasados">CDFPA</abbr></h1>
+        <br>
     </header>
     <section class="sessao">
-        <div class="menu">
-        <fieldset>
-         <legend>
-             <p>Insira o nome de quem se atrasou: </p>
-         </legend>
-        <input type="text" name="txtnome" id="txtnome1">
-        </fieldset>
-        <fieldset>
-            <legend>
+            <div class="menu">
+            <fieldset>
+             <legend>
+                <p>Insira o nome de quem se atrasou: </p>
+             </legend>
+            <input type="text" name="txtnome" id="txtnome1" required>
+            <!--<input type="button" value="+" onclick="adicionar()">
+            <p><input class="hide" type="text" name="txtnome" id="txtnome2"></p> -->
+            </fieldset>
+            <fieldset>
+                <legend>
                 <p>Quantos minutos ele se atrasou?</p>
-            </legend>
-            <input type="number" name="numatraso" id="numatraso" max="60">
-            <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
-        </fieldset>
-        <fieldset>
-            <legend>
+                </legend>
+                <input type="number" name="numatraso" id="numatraso" max="60" required>
+                <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
+            </fieldset>
+            <fieldset>
+                <legend>
                 <p>Qual valor do futeba?</p>
-            </legend>
-            <input type="number" name="numvalor" id="numvalor">
-        </fieldset>
-        <fieldset>
-            <legend>
+                </legend>
+                <input type="number" name="numvalor" id="numvalor" required>
+            </fieldset>
+            <fieldset>
+                <legend>
                 <p>Quantas pessoas jogaram o futeba?</p>
-            </legend>
-            <input type="number" name="numpessoas" id="numpessoas">
-        </fieldset>
-        <p>
+                </legend>
+                <input type="number" name="numpessoas" id="numpessoas" required>
+            </fieldset>
+            <p>
             <fieldset>
                 <legend>Quanto tempo de duração tem o jogo?</legend>
-                <input type="radio" name="tempojogo" id="uma-hora" value="60" checked>
+                <input type="radio" name="tempojogo" id="uma-hora" value="60">
                 <label for="UmaHora">60 minutos</label>
                 <input type="radio" name="tempojogo" id="uma-hora-meia" value="90">
                 <label for="UmaHoraeMeia">90 minutos</label>
@@ -49,17 +52,17 @@
             </fieldset>
         </p>
         <div class="botaocalc" id="botaocalc">
-            <p>
-                <input type="button" value="Calcular" onclick="calcular()">
-            </p>
+        <p>
+        <input type="submit" type="button" value="Calcular" onclick="calcular()">
+        </p>
         </div>
         </div>
-        <div id="res"></div>
-        <div id="out"></div>
-        <div id="fin"></div>
+        <div id="res" class="resultado"></div>
+        <div id="out" class="resultado"></div>
+        <div id="fin" class="resultado"></div>
     </section>
     <footer>
-        <p>&copy; Shape Devs </p>
+        <p class="shapedevs">&copy; Shape Devs </p>
     </footer>
     <script src="index.js"></script>
 </body>

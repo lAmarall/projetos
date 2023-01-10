@@ -9,11 +9,29 @@ body{
     width: 80%; 
 }   
 header{
+margin-top: 50pt;
 color: white;
 text-align: center;
 }
+
+/*.hide{
+    display: none;
+}
+
+.show{
+    display: inline;
+}*/
+
+fieldset{
+    width: 90%;
+    text-align: center;
+    border-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: white;
+}
+
 section{
-    background-color: #3b6035;
+    background-color: #609e56;
     background-image: image();
     border-radius: 10px;
     padding: 15px;
@@ -21,6 +39,11 @@ section{
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.342);
 }
+
+input{
+    box-shadow: 2px 2px black;
+}
+
 div{
     padding: 5px;
     text-justify: auto;
@@ -31,8 +54,18 @@ div{
 .botaocalc{
     text-align: center;
 }
+
+.resultado{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 footer {
-color: white;
+color: rgb(255, 255, 255);
 text-align: center;
 font-style: italic;
+}
+
+.shapedevs{
+    color: blueviolet
 }
