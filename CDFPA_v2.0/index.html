@@ -17,15 +17,13 @@
              <legend>
                 <p>Insira o nome de quem se atrasou: </p>
              </legend>
-            <input type="text" name="txtnome" id="txtnome1" required>
-            <!--<input type="button" value="+" onclick="adicionar()">
-            <p><input class="hide" type="text" name="txtnome" id="txtnome2"></p> -->
+            <label for="text">Nome: <input type="text" name="txtnome" id="txtnome1" required></label>
             </fieldset>
             <fieldset>
                 <legend>
                 <p>Quantos minutos ele se atrasou?</p>
                 </legend>
-                <input type="number" name="numatraso" id="numatraso" max="60" required>
+                <input type="number" name="numatraso" id="numatraso" max="60" min="0" required>
                 <!-- <input type="text" name="txtatraso" id="txtatraso"> -->
             </fieldset>
             <fieldset>
@@ -53,8 +51,9 @@
         </p>
         <div class="botaocalc" id="botaocalc">
         <p>
-        <input type="submit" type="button" value="Calcular" onclick="calcular()">
+        <input type="submit" value="Calcular" onclick="calcular()">
         </p>
+        <p id="msg-erro" class="hide">Por favor, preencha todos os campos obrigatórios.</p>
         </div>
         </div>
         <div id="res" class="resultado"></div>

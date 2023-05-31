@@ -1,4 +1,23 @@
 function calcular(){
+    const nomee = document.querySelector("#txtnome1").value;
+    const atrasoo = document.querySelector("#numatraso").value;
+    const valorr = document.querySelector("#numvalor").value;
+    const pessoass = document.querySelector("#numpessoas").value;
+    const radios = document.querySelectorAll('input[name="tempojogo"]');
+    let tempo = null;
+
+    if (!nome || !atraso || !valor || !pessoas) {
+    const msgErro = document.querySelector("#msg-erro");
+    msgErro.classList.remove("hide");
+    return;
+    }
+
+    for (let i = 0; i < radios.length; i++) {
+    if (radios[i].checked) {
+        tempo = radios[i].value;
+        break;
+    }
+    }
     var nome = document.getElementById('txtnome1')
     var minutos = document.getElementById('numatraso')
     var valor = document.getElementById('numvalor')
@@ -43,7 +62,9 @@ function calcular(){
         fin.innerHTML = `O valor pago a quadra foi de R$${pagoaquadra.toFixed(2)}`
         //pagoaquadra.toFixed(2)
     }
-}   
+    
+}
+   
 /*function adicionar(){
     var elemento = document.getElementById('txtnome2')
     elemento.className = "show";
